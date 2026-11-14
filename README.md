@@ -15,6 +15,11 @@ Most of what I build is systems code where performance and correctness both matt
 - [**paged-rolling-quantile**](https://github.com/akamoyoo/paged-rolling-quantile) — exact sliding-window
   quantiles in C++17, kept in sorted pages. Header-only, tested bit for bit against pandas, and measured
   against the simple baselines, including where they win.
+- [**fastcoint**](https://github.com/akamoyoo/fastcoint) — Engle-Granger cointegration tests for all pairs
+  of N series, and batched ADF tests, from a few N x N matrix products. Reproduces statsmodels to rounding,
+  thousands of times faster on one core.
+- [**fastnearcorr**](https://github.com/akamoyoo/fastnearcorr) — nearest correlation matrix by the
+  semismooth Newton method, NumPy only, with a duality-gap certificate for every result.
 - [**talo**](https://github.com/akamoyoo/talo) — Jupyter-style resident Python sessions for the terminal and
   for coding agents.
 
