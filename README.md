@@ -7,8 +7,10 @@ Most of what I build is systems code where performance and correctness both matt
 
 ## Projects
 
-- [**Taut**](https://github.com/akamoyoo/taut) — a systems language in which function signatures carry
-  compiler-checked contracts for sizes, ownership and effects. Design stage.
+- [**llvm-fn-effects**](https://github.com/akamoyoo/llvm-fn-effects) — a static analyser on LLVM that
+  infers, for every function of a C++ program and without annotations, whether it can allocate, lock,
+  enter the kernel, throw or abort through everything it calls, and states what each answer rests on.
+  First release, with three reproducible cases on open-source low-latency projects.
 - [**stillpath**](https://github.com/akamoyoo/stillpath) — a static checker for Rust hot paths: it checks
   that a function and everything it calls cannot allocate, panic or block, and reports a witness call
   chain and the assumptions behind each verdict. Research prototype, with an evaluation on six crates.
