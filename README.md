@@ -20,6 +20,9 @@ Most of what I build is systems code where performance and correctness both matt
   thousands of times faster on one core.
 - [**fastnearcorr**](https://github.com/akamoyoo/fastnearcorr) — nearest correlation matrix by the
   semismooth Newton method, NumPy only, with a duality-gap certificate for every result.
+- [**fpsplit**](https://github.com/akamoyoo/fpsplit) — lossless compression for columns of computed
+  doubles. Header-only C++20 with a byte-level format specification and an independent reference decoder;
+  smaller than pco on the measured factor columns and three times faster to compress, half as fast to read.
 - [**talo**](https://github.com/akamoyoo/talo) — Jupyter-style resident Python sessions for the terminal and
   for coding agents.
 
