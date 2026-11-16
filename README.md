@@ -7,6 +7,10 @@ Most of what I build is systems code where performance and correctness both matt
 
 ## Projects
 
+- [**tenon**](https://github.com/akamoyoo/tenon) — a small verified language for performance-critical
+  computation kernels. A function that passes the check cannot fail at run time; the check's soundness is
+  proved in Lean 4, programs compile to C, and proofs of the example kernels are one line each. Research
+  prototype, with a list of what is not claimed.
 - [**llvm-fn-effects**](https://github.com/akamoyoo/llvm-fn-effects) — a static analyser on LLVM that
   infers, for every function of a C++ program and without annotations, whether it can allocate, lock,
   enter the kernel, throw or abort through everything it calls, and states what each answer rests on.
