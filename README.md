@@ -11,10 +11,11 @@ Most of what I build is systems code where performance and correctness both matt
   computation kernels. A function that passes the check cannot fail at run time; the check's soundness is
   proved in Lean 4, programs compile to C, and proofs of the example kernels are one line each. Research
   prototype, with a list of what is not claimed.
-- [**llvm-fn-effects**](https://github.com/akamoyoo/llvm-fn-effects) — a static analyser on LLVM that
-  infers, for every function of a C++ program and without annotations, whether it can allocate, lock,
-  enter the kernel, throw or abort through everything it calls, and states what each answer rests on.
-  First release, with three reproducible cases on open-source low-latency projects.
+- [**hotpath-cost**](https://github.com/akamoyoo/hotpath-cost) — what a C++ hot path costs. A static
+  analyser on LLVM infers, without annotations, whether each function can allocate, lock or enter the
+  kernel; a replay counts the allocations and locks of one call exactly at every commit of a library's
+  history, bisects changes to the commit and the source line, and compares GCC and clang. Applied to
+  eighteen open-source low-latency libraries, with four cases and two upstream reports.
 - [**stillpath**](https://github.com/akamoyoo/stillpath) — a static checker for Rust hot paths: it checks
   that a function and everything it calls cannot allocate, panic or block, and reports a witness call
   chain and the assumptions behind each verdict. Research prototype, with an evaluation on six crates.
